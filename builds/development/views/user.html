@@ -1,0 +1,27 @@
+<section>
+<div class="container">
+    <div class="user">
+        <h1>Post a new volunteer needs' info</h1>
+
+        <button class="btn btn-default" data-toggle="modal" data-target="#postModal">
+            Post here
+        </button>
+
+        <h2>My posts</h2>
+
+        <p class='no-events' ng-if="events.length < 1">You don't have any post yet, why not create new one?</p>
+
+        <div class="user-event" ng-repeat="event in events">
+            <a class="event-name" ng-href="#/event/{{userId}}/{{event.$id}}"><h3>{{event.name}}</h3></a>
+            <div class="button-group">
+
+                <a class="btn btn-primary" ng-href="#/signup/{{userId}}/{{event.$id}}">sign up link</a>
+                <a class="btn btn-danger" role='button'
+                    confirmation-needed="Are you sure you want to delete {{event.name}}?"
+                    ng-click="deleteEvent(event.$id)">delete</a>
+            </div><!-- button-group -->
+        </div><!-- events -->
+    </div><!-- user -->
+</div><!-- container -->
+<event-modal></event-modal>
+</section>

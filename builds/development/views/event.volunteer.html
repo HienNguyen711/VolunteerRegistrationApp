@@ -1,0 +1,62 @@
+<section>
+<div class="container">
+    <div class="event">
+        <div>
+            <h1>{{event.name}}</h1>
+            <p>Description: {{event.description}}</p>
+            <p>Responsibilities: {{event.task}}</p>
+            <p>Number of Volunteer needed: {{event.numberOfVolunteerNeeded}}</p>
+            <p>Location: {{event.location}}</p>
+            <p>Date: {{event.date}}</p>
+            <p></p>
+            <a ng-href="#/signup/{{userId}}/{{eventId}}" class="btn btn-default">Sign up for event</a>
+        </div>
+
+        <div>
+            <h2>Search Participants</h2>
+            <input type="text" class="form-control" placeholder="Search by name, age, rank..."
+                ng-model="list.search">
+            <label for="">Order by</label>
+            <select class="form-control" ng-model="list.order">
+              <option value="lastName">Last Name</option>
+              <option value="age">Age</option>
+              <option value="organisation">Organisation</option>
+              <option value="experience">Experience</option>
+              <option value="sex">Sex</option>
+              <option value="divsion">Division</option>
+            </select>
+        </div><!-- search -->
+        <!--SEARCH VOLUNTEERS REGISTERED-->
+        <div>
+            <h2>Volunteer registered:</h2>
+            <table class="table">
+                <thead>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+                    <th>Experience</th>
+                    <th>Organisation</th>
+
+
+                    <th>Sex</th>
+                    <th>Division</th>
+
+                </thead>
+                <tbody>
+                    <tr class="participant"
+                        ng-repeat="user in participants | filter: list.search | orderBy : list.order:list.direction">
+                        <td>{{user.firstName}}</td>
+                        <td>{{user.lastName}}</td>
+                        <td>{{user.age}}</td>
+                        <td>{{user.experience}}</td>
+                        <td>{{user.organisation}}</td>
+                        <td>{{user.sex}}</td>
+                        <td>{{user.division}}</td>
+
+                    </tr><!-- participant -->
+                </tbody>
+            </table><!-- table -->
+        </div> <!-- participants -->
+    </div><!-- event -->
+</div><!-- container -->
+</section>

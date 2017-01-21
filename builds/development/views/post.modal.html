@@ -1,0 +1,68 @@
+<div class="modal fade" id="postModal">
+    <div class="modal-dialogue">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h1 class="text-center">Post new volunteer info need:</h1>
+            </div><!-- modal-header -->
+
+            <div class="modal-body">
+                <form class="form-horizontal"
+                    ng-submit="addEvent()">
+                    <div class="form-group">
+                        <label for="eventName" class="col-sm-2 control-label">Event Name</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="name" id="eventName"
+                                ng-model="event.name" required>
+                        </div><!-- col-sm-10 -->
+                    </div><!-- form-group -->
+
+
+                   <!--description-->
+                    <div class="form-group">
+                        <label for="description" class="col-sm-2 control-label">Description</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="description" id="description"
+                                ng-model="event.description" required>
+                        </div><!-- col-sm-10 -->
+                    </div><!-- form-group -->
+
+                     <div class="form-group">
+                        <label for="task" class="col-sm-2 control-label">Volunteer tasks:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="task" id="eventTask"
+                                ng-model="event.task" required>
+                        </div><!-- col-sm-10 -->
+                    </div><!-- form-group -->
+                     <div class="form-group">
+                        <label for="numberOfVolunteer" class="col-sm-2 control-label">Number of volunteer needed:</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" placeholder="number of volunteer needed" id="numberOfVolunteerNeeded"
+                                ng-model="event.numberOfVolunteerNeeded" required>
+                        </div><!-- col-sm-10 -->
+                    </div><!-- form-group -->
+                    <div class="form-group">
+                        <label for="eventLocation" class="col-sm-2 control-label">Location</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="location" id="eventLocation"
+                                ng-model="event.location" required>
+                        </div><!-- col-sm-10 -->
+                    </div><!-- form-group -->
+
+                    <div class="form-group">
+                        <label for="eventDate" class="col-sm-2 control-label">Date</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder="date" id="eventDate"
+                                ng-model="event.date" required>
+                        </div><!-- col-sm-10 -->
+                    </div><!-- form-group -->
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-primary">Make</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div><!-- button-group -->
+                </form>
+            </div><!-- modal-body -->
+
+        </div><!-- modal-content -->
+    </div><!-- modal-dialogue -->
+</div><!-- modal fade -->

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <title>VolunteerRegistration</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Volunteer Registration app">
+    <meta name="keywords" content="Angular, Firebase">
+    <meta name="author" content="HienNguyen">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <!--STYLESHEETS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="stylesheet" href="styles/bootstrap.united.min.css">
+    <!--SCRIPTS-->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-route.js'></script>
+
+    <script src="https://cdn.firebase.com/js/client/2.3.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+
+</head>
+
+<body>
+    <!--HEADER-->
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top" ng-include="'views/navBar.html'" ng-controller="NavController"></nav>
+    </header>
+    <!--NG-VIEW-->
+    <div class="container">
+        <div class="page">
+            <main ng-view></main>
+        </div>
+    </div>
+    <script src='main.js'></script>
+</body>
+
+</html>

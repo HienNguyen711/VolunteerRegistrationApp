@@ -1,0 +1,19 @@
+.directory {
+  @extend .box;
+
+  .directory-event {
+    @extend .box;
+    background-color: #d5d5d5;
+		padding: 10px 15px;
+		text-align: left;
+		
+		&:hover { background-color: #dfdfdf; }
+
+		a {text-decoration: none; }
+
+    p {
+    	font-size: 1.5em;
+    	span { font-weight: 500; }
+    }
+  }
+}
